@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOLIVIA | La Voie de l'Énergie Solaire</title>
+    <title>SOLIVIA | Smart Solar Style Morocco</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
@@ -29,7 +29,7 @@
         .nav-links a { text-decoration: none; color: white; font-weight: 400; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
         .nav-links a:hover { color: var(--gold); }
 
-        /* Hero Section - Image de la fille (toot.bag gen z.jpg) */
+        /* Hero Section - L'image de la fille obligatoirement ici */
         .hero {
             height: 100vh;
             background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('toot.bag gen z.jpg'); 
@@ -40,7 +40,7 @@
             padding: 0 8%;
             color: white;
         }
-        .hero-content { max-width: 700px; animation: fadeInUp 1s ease; }
+        .hero-content { max-width: 750px; animation: fadeInUp 1s ease; }
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
         
         .hero-content h1 { font-family: 'Playfair Display', serif; font-size: 4rem; line-height: 1.1; margin-bottom: 20px; }
@@ -58,52 +58,45 @@
         .title-group h2 { font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--dark); }
         .title-group p { color: var(--primary); text-transform: uppercase; letter-spacing: 3px; font-size: 0.9rem; margin-bottom: 10px; }
 
-        /* Products Grid */
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-        .product-card { background: white; border-radius: 10px; overflow: hidden; transition: 0.4s; border: 1px solid #f0f0f0; text-align: center;}
+        /* Product Gallery */
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .product-card { background: white; border-radius: 5px; overflow: hidden; transition: 0.4s; border: 1px solid #eee; text-align: center;}
         .product-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
-        .product-card img { width: 100%; height: 380px; object-fit: cover; }
+        .product-card img { width: 100%; height: 350px; object-fit: cover; }
         .product-info { padding: 20px; }
-        .price { font-size: 1.2rem; color: var(--primary); font-weight: 700; margin-top: 10px; }
+        .product-tag { font-size: 0.7rem; color: var(--gold); font-weight: 600; text-transform: uppercase; }
 
-        /* Vision Section (ADN du document) */
+        /* Vision Section (S-O-L-I-V-I-A) */
         .vision-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
-            margin-top: 40px;
         }
         .vision-item { background: #fff; padding: 40px 30px; text-align: center; border-bottom: 4px solid var(--gold); transition: 0.3s; }
         .vision-item:hover { background: var(--primary); color: white; }
-        .vision-item:hover i { color: white; }
-        .vision-item i { font-size: 2.5rem; color: var(--gold); margin-bottom: 20px; }
-        .vision-item h4 { font-family: 'Playfair Display', serif; font-size: 1.4rem; margin-bottom: 15px; }
+        .vision-item i { font-size: 2.2rem; color: var(--gold); margin-bottom: 20px; }
+        .vision-item h4 { font-family: 'Playfair Display', serif; margin-bottom: 15px; }
 
         /* Contact Section */
         .contact-container {
             max-width: 1100px; margin: 0 auto; background: white; border-radius: 15px;
-            display: flex; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,0.05);
+            display: flex; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,0.1);
         }
         .contact-info { background: var(--primary); color: white; padding: 60px; flex: 1; }
         .contact-form { padding: 60px; flex: 1.5; }
         .input-group { margin-bottom: 25px; }
-        .input-group label { display: block; margin-bottom: 8px; font-size: 0.8rem; text-transform: uppercase; font-weight: 600; color: #555; }
         .input-group input, .input-group select, .input-group textarea {
-            width: 100%; padding: 15px; border: 1px solid #eee; border-radius: 5px; outline: none; font-family: inherit; background: #fafafa;
+            width: 100%; padding: 15px; border: 1px solid #eee; border-radius: 5px; background: #fafafa;
         }
 
         .order-btn {
             width: 100%; padding: 18px; background: #25D366; color: white; border: none;
-            border-radius: 50px; font-weight: 700; font-size: 1.1rem; cursor: pointer;
-            display: flex; align-items: center; justify-content: center; transition: 0.3s;
+            border-radius: 50px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center;
         }
-        .order-btn:hover { background: #1ebd57; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37,211,102,0.3); }
-        .order-btn i { margin-right: 15px; font-size: 1.6rem; }
 
-        footer { background: var(--dark); color: #888; padding: 60px 8% 20px; text-align: center; }
+        footer { background: var(--dark); color: #888; padding: 40px 8%; text-align: center; }
 
         @media (max-width: 768px) {
-            .hero-content h1 { font-size: 2.8rem; }
             .contact-container { flex-direction: column; }
             .nav-links { display: none; }
         }
@@ -115,49 +108,57 @@
         <div class="logo">SOLIVIA</div>
         <ul class="nav-links">
             <li><a href="#home">Accueil</a></li>
-            <li><a href="#produits">Produits</a></li>
-            <li><a href="#vision">Notre Vision</a></li>
+            <li><a href="#produits">Collection</a></li>
+            <li><a href="#vision">Notre ADN</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
     <section class="hero" id="home">
         <div class="hero-content">
-            <p style="color: var(--gold); font-weight: 600; letter-spacing: 5px; text-transform: uppercase;">Innovation Marocaine</p>
+            <p style="color: var(--gold); font-weight: 600; letter-spacing: 5px; text-transform: uppercase;">Solar Energy Solutions</p>
             <h1>Rechargez votre monde, partout et à tout moment.</h1>
-            <p>Le <strong>sac intelligent Maroc</strong> qui combine luxe, mobilité et <strong>solar energy solutions</strong>.</p>
-            <a href="#produits" class="cta-main">Explorer la collection</a>
+            <p><strong>SOLIVIA</strong> fusionne le lifestyle moderne avec l'autonomie solaire. Le sac intelligent conçu pour la nouvelle génération marocaine.</p>
+            <a href="#produits" class="cta-main">Voir les Modèles</a>
         </div>
     </section>
 
     <section class="section" id="produits">
         <div class="title-group">
-            <p>Boutique Officielle</p>
-            <h2>Collection S'LIVIA 2026</h2>
+            <p>Smart Travel Gear</p>
+            <h2>La Collection SOLIVIA</h2>
         </div>
         <div class="product-grid">
             <div class="product-card">
-                <img src="sac-beige.jpg.jpg" alt="Solar Backpack">
+                <img src="sac-beige.jpg.jpg" alt="Solar Bag Beige">
                 <div class="product-info">
+                    <span class="product-tag">Best Seller</span>
                     <h3>The Beige Nomad</h3>
-                    <p>Eco friendly & Solar powered</p>
-                    <div class="price">890 DH</div>
+                    <p class="price" style="color: var(--primary); font-weight: bold;">890 DH</p>
                 </div>
             </div>
             <div class="product-card">
-                <img src="backpack (9).jpg" alt="Solar Tech Morocco">
+                <img src="sac-black.jpg.jpg" alt="Solar Bag Black">
                 <div class="product-info">
-                    <h3>The Tech Explorer</h3>
-                    <p>Smart solar bag for laptop</p>
-                    <div class="price">950 DH</div>
+                    <span class="product-tag">Tech Gear</span>
+                    <h3>Obsidian Smart</h3>
+                    <p class="price" style="color: var(--primary); font-weight: bold;">950 DH</p>
                 </div>
             </div>
             <div class="product-card">
-                <img src="sac-luxury.jpg.jpg" alt="Luxury Solar Bag">
+                <img src="sac-luxury.jpg.jpg" alt="Luxury Green Solar">
                 <div class="product-info">
-                    <h3>Forest Prestige</h3>
-                    <p>Sustainable travel gear</p>
-                    <div class="price">1,100 DH</div>
+                    <span class="product-tag">Premium</span>
+                    <h3>Emerald Prestige</h3>
+                    <p class="price" style="color: var(--primary); font-weight: bold;">1,100 DH</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="backpack (9).jpg" alt="Backpack Solar">
+                <div class="product-info">
+                    <span class="product-tag">Adventure</span>
+                    <h3>Explorer Backpack</h3>
+                    <p class="price" style="color: var(--primary); font-weight: bold;">980 DH</p>
                 </div>
             </div>
         </div>
@@ -165,89 +166,70 @@
 
     <section class="section" id="vision" style="background-color: #f7f3f0;">
         <div class="title-group">
-            <p>Notre ADN</p>
-            <h2>La Voie de l'Énergie Solaire</h2>
+            <p>Signification</p>
+            <h2>Pourquoi SOLIVIA ?</h2>
         </div>
         <div class="vision-grid">
             <div class="vision-item">
-                <i class="fas fa-microchip"></i>
-                <h4>Optimized Energy</h4>
-                <p>Gestion intelligente de la charge pour protéger vos appareils.</p>
+                <i class="fas fa-sun"></i>
+                <h4>Solar & Optimized</h4>
+                <p>Une source d'énergie durable intégrée avec intelligence pour vos appareils.</p>
             </div>
             <div class="vision-item">
-                <i class="fas fa-gem"></i>
-                <h4>Lifestyle Premium</h4>
-                <p>Un accessoire moderne qui s'adapte au mode de vie urbain.</p>
+                <i class="fas fa-walking"></i>
+                <h4>Via & Lifestyle</h4>
+                <p>Le compagnon idéal pour votre "Via" (chemin), alliant design et utilité urbaine.</p>
             </div>
             <div class="vision-item">
                 <i class="fas fa-battery-full"></i>
                 <h4>Autonomy</h4>
-                <p>Indépendance totale grâce aux panneaux solaires intégrés.</p>
+                <p>Libérez-vous des prises murales avec notre technologie de recharge solaire.</p>
             </div>
         </div>
     </section>
 
     <section class="section" id="contact">
-        <div class="title-group">
-            <p>Commander</p>
-            <h2>Contact & Commandes</h2>
-        </div>
-
         <div class="contact-container">
             <div class="contact-info">
-                <h3 style="font-family: 'Playfair Display'; font-size: 2rem; margin-bottom: 20px;">Contact Info</h3>
-                <p style="margin-bottom: 15px;"><i class="fas fa-phone-alt" style="margin-right: 10px;"></i> +212 693 702 209</p>
-                <p style="margin-bottom: 15px;"><i class="fas fa-envelope" style="margin-right: 10px;"></i> hello@solivia.ma</p>
-                <p style="margin-bottom: 40px;"><i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> Casablanca, Maroc</p>
-                
-                <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin-bottom: 30px;">
-                <p style="font-style: italic; font-size: 0.9rem; opacity: 0.8;">"Rechargez votre monde, partout et à tout moment."</p>
+                <h3 style="font-family: 'Playfair Display'; font-size: 2rem; margin-bottom: 20px;">Commander</h3>
+                <p>Besoin d'un <strong>sac solaire pour laptop</strong> ou téléphone ?</p><br>
+                <p><i class="fas fa-phone-alt"></i> +212 693 702 209</p>
+                <p><i class="fas fa-envelope"></i> contact@solivia.ma</p>
             </div>
 
             <div class="contact-form">
                 <div class="input-group">
-                    <label>Nom Complet</label>
-                    <input type="text" id="name" placeholder="Votre nom">
+                    <label>Nom complet</label>
+                    <input type="text" id="cust-name" placeholder="Votre nom">
                 </div>
                 <div class="input-group">
-                    <label>Choisir votre Sac Solaire</label>
-                    <select id="bag-model">
-                        <option value="Beige Nomad">The Beige Nomad - 890 DH</option>
-                        <option value="Tech Explorer">The Tech Explorer - 950 DH</option>
-                        <option value="Forest Prestige">Forest Prestige - 1,100 DH</option>
+                    <label>Choisir votre modèle</label>
+                    <select id="cust-model">
+                        <option value="Beige Nomad">The Beige Nomad</option>
+                        <option value="Obsidian Smart">Obsidian Smart</option>
+                        <option value="Emerald Prestige">Emerald Prestige</option>
+                        <option value="Explorer Backpack">Explorer Backpack</option>
                     </select>
                 </div>
-                <div class="input-group">
-                    <label>Message (Adresse ou Taille)</label>
-                    <textarea id="message" rows="3" placeholder="Ex: Livraison à Rabat..."></textarea>
-                </div>
-                <button class="order-btn" onclick="sendWhatsApp()">
-                    <i class="fab fa-whatsapp"></i> COMMANDER SUR WHATSAPP
+                <button class="order-btn" onclick="orderNow()">
+                    <i class="fab fa-whatsapp"></i> COMMANDER VIA WHATSAPP
                 </button>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 SOLIVIA | Projet par Douae & Fatima Zohra.</p>
-        <p style="font-size: 0.8rem; margin-top: 10px;">Sac Tech Maroc • Énergie Solaire • Sac Intelligent</p>
+        <p>&copy; 2026 SOLIVIA BRAND | Proposé par Douae & Fatima Zohra</p>
     </footer>
 
     <script>
-        function sendWhatsApp() {
-            const name = document.getElementById('name').value;
-            const model = document.getElementById('bag-model').value;
-            const msg = document.getElementById('message').value;
+        function orderNow() {
+            const name = document.getElementById('cust-name').value;
+            const model = document.getElementById('cust-model').value;
             const phone = "212693702209";
-
-            if(name === "") {
-                alert("Veuillez entrer votre nom khoya/khti.");
-                return;
-            }
-
-            const finalMsg = `Salam SOLIVIA! \n\nJe m'appelle *${name}* et je souhaite commander le modèle : *${model}*.\n\nInfos : ${msg}`;
-            const url = `https://wa.me/${phone}?text=${encodeURIComponent(finalMsg)}`;
-            window.open(url, '_blank');
+            if(name==""){alert("Entrez votre nom"); return;}
+            const message = `Salam SOLIVIA, je suis ${name}. Je veux commander le modèle : ${model}.`;
+            window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
         }
     </script>
 </body>
