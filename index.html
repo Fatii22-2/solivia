@@ -29,7 +29,7 @@
         .nav-links a { text-decoration: none; color: white; font-weight: 400; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
         .nav-links a:hover { color: var(--gold); }
 
-        /* HERO SECTION : Image toot.bag gen z.jpg */
+        /* HERO SECTION - Tswira dyal lbent smitha: toot.bag gen z.jpg */
         .hero {
             height: 100vh;
             background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('toot.bag gen z.jpg'); 
@@ -40,9 +40,7 @@
             padding: 0 8%;
             color: white;
         }
-        .hero-content { max-width: 750px; animation: fadeInUp 1s ease; }
-        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-        
+        .hero-content { max-width: 750px; }
         .hero-content h1 { font-family: 'Playfair Display', serif; font-size: 4rem; line-height: 1.1; margin-bottom: 20px; }
         .hero-content p { font-size: 1.2rem; margin-bottom: 35px; color: #eee; font-weight: 300; }
         
@@ -58,10 +56,10 @@
         .title-group h2 { font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--dark); }
         .title-group p { color: var(--primary); text-transform: uppercase; letter-spacing: 3px; font-size: 0.9rem; margin-bottom: 10px; }
 
-        /* Grid des 10 Produits */
+        /* Product Gallery */
         .product-grid { 
             display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
             gap: 25px; 
         }
         .product-card { 
@@ -73,19 +71,21 @@
             text-align: center;
         }
         .product-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.08); }
-        .product-card img { width: 100%; height: 320px; object-fit: cover; }
+        .product-card img { width: 100%; height: 400px; object-fit: cover; background-color: #f9f9f9; }
         .product-info { padding: 15px; }
-        .product-info h3 { font-size: 1rem; margin-bottom: 5px; font-family: 'Playfair Display', serif; }
-        .price { color: var(--primary); font-weight: 700; font-size: 1.1rem; }
+        .product-info h3 { font-size: 1.1rem; margin-bottom: 5px; font-family: 'Playfair Display', serif; }
+        .price { color: var(--primary); font-weight: 700; font-size: 1.2rem; }
 
-        /* Vision Section */
+        /* Vision Section - Inspired by the Livrable Document */
         .vision-grid {
             display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;
         }
-        .vision-item { background: #fff; padding: 40px 30px; text-align: center; border-bottom: 4px solid var(--gold); }
+        .vision-item { background: #fff; padding: 40px 30px; text-align: center; border-bottom: 4px solid var(--gold); transition: 0.3s; }
+        .vision-item:hover { background: var(--primary); color: white; }
         .vision-item i { font-size: 2.2rem; color: var(--gold); margin-bottom: 20px; }
+        .vision-item:hover i { color: white; }
 
-        /* Contact Section */
+        /* Contact Section Stylé */
         .contact-container {
             max-width: 1100px; margin: 0 auto; background: white; border-radius: 15px;
             display: flex; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,0.1);
@@ -93,20 +93,24 @@
         .contact-info { background: var(--primary); color: white; padding: 60px; flex: 1; }
         .contact-form { padding: 60px; flex: 1.5; }
         .input-group { margin-bottom: 25px; }
+        .input-group label { display: block; margin-bottom: 5px; font-weight: 600; font-size: 0.8rem; text-transform: uppercase; color: #555; }
         .input-group input, .input-group select {
-            width: 100%; padding: 15px; border: 1px solid #eee; border-radius: 5px; background: #fafafa;
+            width: 100%; padding: 15px; border: 1px solid #eee; border-radius: 5px; background: #fafafa; outline: none;
         }
 
         .order-btn {
             width: 100%; padding: 18px; background: #25D366; color: white; border: none;
             border-radius: 50px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center;
+            transition: 0.3s; font-size: 1.1rem;
         }
+        .order-btn:hover { background: #1ebd57; transform: translateY(-2px); box-shadow: 0 10px 20px rgba(37,211,102,0.2); }
 
         footer { background: var(--dark); color: #888; padding: 40px 8%; text-align: center; }
 
         @media (max-width: 768px) {
             .contact-container { flex-direction: column; }
             .nav-links { display: none; }
+            .hero-content h1 { font-size: 2.5rem; }
         }
     </style>
 </head>
@@ -124,9 +128,9 @@
 
     <section class="hero" id="home">
         <div class="hero-content">
-            <p style="color: var(--gold); font-weight: 600; letter-spacing: 5px; text-transform: uppercase;">Smart Tech Lifestyle</p>
+            <p style="color: var(--gold); font-weight: 600; letter-spacing: 5px; text-transform: uppercase;">Smart Solar Lifestyle</p>
             <h1>Rechargez votre monde, partout et à tout moment.</h1>
-            <p><strong>SOLIVIA</strong> : Le futur de la mode durable au Maroc. Nos sacs solaires intelligents vous offrent une autonomie totale.</p>
+            <p><strong>SOLIVIA</strong> fusionne le lifestyle moderne avec l'autonomie solaire. Le sac intelligent conçu pour la nouvelle génération marocaine.</p>
             <a href="#produits" class="cta-main">Explorer la boutique</a>
         </div>
     </section>
@@ -184,51 +188,79 @@
     <section class="section" id="vision" style="background-color: #f7f3f0;">
         <div class="title-group">
             <p>Notre ADN</p>
-            <h2>Vision SOLIVIA</h2>
+            <h2>La Voie SOLIVIA</h2>
         </div>
         <div class="vision-grid">
-            <div class="vision-item"><i class="fas fa-sun"></i><h4>Solar</h4><p>Énergie durable intégrée.</p></div>
-            <div class="vision-item"><i class="fas fa-gem"></i><h4>Lifestyle</h4><p>Design premium & moderne.</p></div>
-            <div class="vision-item"><i class="fas fa-battery-full"></i><h4>Autonomy</h4><p>Liberté de mouvement totale.</p></div>
+            <div class="vision-item">
+                <i class="fas fa-sun"></i>
+                <h4>Solar & Durable</h4>
+                <p>Énergie solaire intégrée pour une autonomie totale et écologique.</p>
+            </div>
+            <div class="vision-item">
+                <i class="fas fa-gem"></i>
+                <h4>Lifestyle Urbain</h4>
+                <p>Un accessoire premium, élégant et adapté au dynamisme moderne.</p>
+            </div>
+            <div class="vision-item">
+                <i class="fas fa-microchip"></i>
+                <h4>Intelligence Smart</h4>
+                <p>Innovation et connectivité pour recharger vos appareils partout.</p>
+            </div>
         </div>
     </section>
 
     <section class="section" id="contact">
+        <div class="title-group">
+            <p>Passer Commande</p>
+            <h2>Contact</h2>
+        </div>
         <div class="contact-container">
             <div class="contact-info">
-                <h3 style="font-family: 'Playfair Display'; font-size: 2rem; margin-bottom: 20px;">Commandez</h3>
-                <p><i class="fas fa-phone-alt"></i> +212 693 702 209</p><br>
-                <p>Livraison partout au Maroc.</p>
+                <h3 style="font-family: 'Playfair Display'; font-size: 2.2rem; margin-bottom: 25px;">SOLIVIA Office</h3>
+                <p style="margin-bottom: 15px;"><i class="fas fa-phone-alt"></i> +212 693 702 209</p>
+                <p style="margin-bottom: 15px;"><i class="fas fa-map-marker-alt"></i> Casablanca, Maroc</p>
+                <p><i class="fas fa-envelope"></i> contact@solivia.ma</p>
             </div>
             <div class="contact-form">
-                <div class="input-group"><input type="text" id="cust-name" placeholder="Votre Nom"></div>
                 <div class="input-group">
+                    <label>Nom complet</label>
+                    <input type="text" id="cust-name" placeholder="Votre nom">
+                </div>
+                <div class="input-group">
+                    <label>Modèle souhaité</label>
                     <select id="cust-model">
                         <option value="Beige Nomad">The Beige Nomad</option>
                         <option value="Obsidian Smart">Obsidian Smart</option>
                         <option value="Emerald Prestige">Emerald Prestige</option>
                         <option value="Explorer Backpack">Explorer Backpack</option>
                         <option value="Classic Sienna">Classic Sienna</option>
-                        <option value="Solar Mini">Pink Solar Mini</option>
-                        <option value="Rose Blossom">Rose Blossom Tote</option>
-                        <option value="Eco Green">Eco Leaf Green</option>
-                        <option value="Urban Forest">Urban Forest Tote</option>
-                        <option value="Gen-Z Bag">Gen-Z Solar Bag</option>
+                        <option value="Pink Solar Mini">Pink Solar Mini</option>
+                        <option value="Rose Blossom Tote">Rose Blossom Tote</option>
+                        <option value="Eco Leaf Green">Eco Leaf Green</option>
+                        <option value="Urban Forest Tote">Urban Forest Tote</option>
+                        <option value="Gen-Z Solar Bag">Gen-Z Solar Bag</option>
                     </select>
                 </div>
-                <button class="order-btn" onclick="sendToWA()"><i class="fab fa-whatsapp"></i> COMMANDER VIA WHATSAPP</button>
+                <button class="order-btn" onclick="sendToWA()">
+                    <i class="fab fa-whatsapp" style="margin-right: 15px;"></i> COMMANDER SUR WHATSAPP
+                </button>
             </div>
         </div>
     </section>
 
-    <footer><p>&copy; 2026 SOLIVIA | Douae & Fatima Zohra</p></footer>
+    <footer>
+        <p>&copy; 2026 SOLIVIA BRAND | Proposé par Douae & Fatima Zohra</p>
+        <p style="font-size: 0.75rem; margin-top: 10px; opacity: 0.6;">Solar Charging Technology • Sustainable Style • Morocco</p>
+    </footer>
 
     <script>
         function sendToWA() {
             const name = document.getElementById('cust-name').value;
             const model = document.getElementById('cust-model').value;
-            if(name == "") { alert("Veuillez entrer votre nom."); return; }
-            window.open(`https://wa.me/212693702209?text=Salam SOLIVIA, je suis ${name}. Je commande le modèle : ${model}`, '_blank');
+            const phone = "212693702209";
+            if(name.trim() == "") { alert("Veuillez entrer votre nom."); return; }
+            const message = `Salam SOLIVIA, je suis ${name}. Je souhaite commander le modèle : ${model}.`;
+            window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
         }
     </script>
 </body>
