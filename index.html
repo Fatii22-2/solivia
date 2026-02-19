@@ -1,45 +1,203 @@
-<body class="bg-[#FDFBF9]">
-    <nav class="fixed w-full z-50 glass-nav border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="brand-font text-2xl font-bold tracking-[0.2em]">SOLIVIA</a>
-            <div class="hidden md:flex space-x-10 text-[10px] uppercase tracking-[0.2em] font-bold">
-                <a href="index.html" class="text-amber-700">Accueil</a>
-                <a href="products.html" class="hover:text-amber-700 transition">Collection</a>
-                <a href="about.html" class="hover:text-amber-700 transition">À Propos</a>
-                <a href="contact.html" class="hover:text-amber-700 transition">Contact</a>
-            </div>
-            <div class="flex items-center space-x-5 text-sm">
-                <i class="fa-solid fa-bag-shopping"></i>
-            </div>
-        </div>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S'LIVIA | Énergie Solaire Portative au Maroc</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #8B5E3C; /* Marron cuir */
+            --secondary: #2D4F1E; /* Vert écolo */
+            --accent: #D4AF37; /* Or pour le luxe */
+            --light: #F9F7F2;
+            --dark: #1A1A1A;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--light); color: var(--dark); line-height: 1.6; }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--primary); letter-spacing: 2px; }
+        .nav-links { list-style: none; display: flex; }
+        .nav-links li { margin-left: 30px; }
+        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 500; transition: 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1559348349-86f1f65817fe?auto=format&fit=crop&w=1350&q=80'); /* Background de remplacement */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 0 20px;
+        }
+        .hero-content h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 20px; }
+        .hero-content p { font-size: 1.2rem; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .btn {
+            padding: 12px 35px;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        .btn:hover { background: var(--primary); transform: translateY(-3px); }
+
+        /* Products Section */
+        .section { padding: 80px 8%; }
+        .section-title { text-align: center; font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 50px; }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .product-card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            transition: 0.3s;
+            text-align: center;
+            border: 1px solid #eee;
+        }
+        .product-card:hover { shadow: 0 10px 20px rgba(0,0,0,0.1); transform: scale(1.02); }
+        .product-card img { width: 100%; border-radius: 8px; margin-bottom: 15px; }
+        .product-card h3 { margin-bottom: 10px; color: var(--primary); }
+        .price { font-weight: 600; color: var(--secondary); font-size: 1.2rem; }
+
+        /* About Section */
+        .about { background: #fff; display: flex; align-items: center; flex-wrap: wrap; gap: 40px; }
+        .about-text { flex: 1; min-width: 300px; }
+        .about-img { flex: 1; min-width: 300px; border-radius: 15px; overflow: hidden; }
+        .about-img img { width: 100%; display: block; }
+
+        /* Contact / WhatsApp */
+        .contact-box {
+            background: var(--primary);
+            color: white;
+            padding: 60px;
+            text-align: center;
+            border-radius: 20px;
+        }
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            background: #25D366;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            font-size: 1.1rem;
+        }
+        .whatsapp-btn i { margin-right: 10px; font-size: 1.5rem; }
+
+        /* Footer */
+        footer { background: var(--dark); color: #888; padding: 40px 8%; text-align: center; }
+        
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.5rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">S'LIVIA</div>
+        <ul class="nav-links">
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#produits">Collections</a></li>
+            <li><a href="#propos">À Propos</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
 
-    <section class="relative h-screen flex items-center overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <img src="toot.bag gen z.jpg" alt="Solivia Lifestyle" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/40 to-transparent"></div>
-        </div>
-
-        <div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
-            <div class="max-w-2xl space-y-8" data-aos="fade-right">
-                <span class="inline-block px-4 py-1 border border-amber-800 text-amber-800 text-[10px] uppercase tracking-[0.3em] rounded-full font-bold">Nouvelle Collection 2026</span>
-                <h1 class="brand-font text-6xl md:text-8xl leading-tight text-gray-900">L'Énergie <br><span class="italic text-amber-900">en Mouvement.</span></h1>
-                <p class="text-gray-700 text-lg max-w-md font-light leading-relaxed">
-                    Découvrez le mariage parfait entre l'artisanat marocain ancestral et la technologie solaire de pointe. 
-                </p>
-                <div class="pt-4 flex space-x-4">
-                    <a href="products.html" class="inline-block bg-black text-white px-12 py-5 text-[10px] uppercase tracking-[0.2em] hover:bg-amber-900 transition-all shadow-2xl">Explorer la Collection</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="absolute bottom-10 right-10 bg-white/80 backdrop-blur-md p-6 shadow-2xl border-l-4 border-green-500 animate-bounce">
-            <p class="text-[9px] uppercase tracking-widest text-gray-500 mb-1">Système Intelligent</p>
-            <p class="text-sm font-bold text-green-700">Charge Solaire Optimisée ⚡</p>
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>L'élégance sous le soleil du Maroc</h1>
+            <p>Découvrez nos sacs à main et sacs à dos dotés de <strong>panneaux solaires intelligents</strong>. Restez connecté avec style, où que vous soyez.</p>
+            <a href="#produits" class="btn">Voir la Collection</a>
         </div>
     </section>
 
-    <footer class="py-12 text-center text-[9px] text-gray-400 uppercase tracking-[0.3em] bg-white border-t border-gray-50">
-        © 2026 SOLIVIA Morocco. Excellence & Innovation Solaire.
+    <section class="section" id="produits">
+        <h2 class="section-title">Nos Best-Sellers</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="sac-brown.jpg.jpg" alt="Solar Tote Brown">
+                <h3>Le Grand Cabas Cuir</h3>
+                <p>Portable solar charging backpack pour femme active.</p>
+                <p class="price">850 DH</p>
+            </div>
+            <div class="product-card">
+                <img src="backpack (9).jpg" alt="Solar Backpack">
+                <h3>Le Backpack Tech</h3>
+                <p>Smart solar bag idéal pour laptop et voyages.</p>
+                <p class="price">950 DH</p>
+            </div>
+            <div class="product-card">
+                <img src="sac-luxury.jpg.jpg" alt="Luxury Green">
+                <h3>L'Émeraude Prestige</h3>
+                <p>Énergie solaire Maroc avec une finition luxe.</p>
+                <p class="price">1200 DH</p>
+            </div>
+            <div class="product-card">
+                <img src="sac.a.main pink.jpg" alt="Pink Sling Bag">
+                <h3>Sling Bag Rose</h3>
+                <p>Sac rechargeable solaire léger et urbain.</p>
+                <p class="price">550 DH</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section about" id="propos">
+        <div class="about-img">
+            <img src="toot.bag-green (6).jpg" alt="Style S'livia">
+        </div>
+        <div class="about-text">
+            <h2 style="font-family: 'Playfair Display'; font-size: 2.5rem; margin-bottom: 20px;">L'innovation Durable</h2>
+            <p>Chez <strong>S'LIVIA</strong>, nous croyons que la mode ne doit pas sacrifier la fonctionnalité. Nos sacs intègrent des <strong>panneaux solaires haute performance</strong> pour charger vos smartphones et tablettes en utilisant une énergie 100% renouvelable.</p>
+            <br>
+            <p>Eco-friendly et sophistiqués, nos modèles sont conçus pour les Marocains modernes qui bougent.</p>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <div class="contact-box">
+            <h2>Prêt à passer commande ?</h2>
+            <p>Une question sur nos produits ? Contactez-nous directement sur WhatsApp pour un service rapide.</p>
+            <a href="https://wa.me/212600000000" class="whatsapp-btn">
+                <i class="fab fa-whatsapp"></i> Commander via WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 S'LIVIA Solar Fashion. Tous droits réservés.</p>
+        <p>Sustainable Travel Gear | Eco Tech Maroc</p>
     </footer>
+
 </body>
+</html>
