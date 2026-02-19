@@ -29,7 +29,7 @@
         .nav-links a { text-decoration: none; color: white; font-weight: 400; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
         .nav-links a:hover { color: var(--gold); }
 
-        /* HERO SECTION */
+        /* HERO SECTION : Image toot.bag gen z.jpg */
         .hero {
             height: 100vh;
             background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('toot.bag gen z.jpg'); 
@@ -40,7 +40,9 @@
             padding: 0 8%;
             color: white;
         }
-        .hero-content { max-width: 750px; }
+        .hero-content { max-width: 750px; animation: fadeInUp 1s ease; }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        
         .hero-content h1 { font-family: 'Playfair Display', serif; font-size: 4rem; line-height: 1.1; margin-bottom: 20px; }
         .hero-content p { font-size: 1.2rem; margin-bottom: 35px; color: #eee; font-weight: 300; }
         
@@ -56,7 +58,7 @@
         .title-group h2 { font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--dark); }
         .title-group p { color: var(--primary); text-transform: uppercase; letter-spacing: 3px; font-size: 0.9rem; margin-bottom: 10px; }
 
-        /* Product Gallery */
+        /* Grid des 10 Produits */
         .product-grid { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
@@ -71,7 +73,7 @@
             text-align: center;
         }
         .product-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.08); }
-        .product-card img { width: 100%; height: 350px; object-fit: cover; background-color: #f0f0f0; }
+        .product-card img { width: 100%; height: 320px; object-fit: cover; }
         .product-info { padding: 15px; }
         .product-info h3 { font-size: 1rem; margin-bottom: 5px; font-family: 'Playfair Display', serif; }
         .price { color: var(--primary); font-weight: 700; font-size: 1.1rem; }
@@ -194,7 +196,7 @@
     <section class="section" id="contact">
         <div class="contact-container">
             <div class="contact-info">
-                <h3 style="font-family: 'Playfair Display'; font-size: 2rem; margin-bottom: 20px;">Contact</h3>
+                <h3 style="font-family: 'Playfair Display'; font-size: 2rem; margin-bottom: 20px;">Commandez</h3>
                 <p><i class="fas fa-phone-alt"></i> +212 693 702 209</p><br>
                 <p>Livraison partout au Maroc.</p>
             </div>
@@ -219,7 +221,7 @@
         </div>
     </section>
 
-    <footer><p>&copy; 2026 SOLIVIA | Projet par Douae & Fatima Zohra</p></footer>
+    <footer><p>&copy; 2026 SOLIVIA | Douae & Fatima Zohra</p></footer>
 
     <script>
         function sendToWA() {
