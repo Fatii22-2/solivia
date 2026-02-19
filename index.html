@@ -29,10 +29,10 @@
         .nav-links a { text-decoration: none; color: white; font-weight: 400; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
         .nav-links a:hover { color: var(--gold); }
 
-        /* HERO SECTION : HADI HIYA TSWIRA DYAL LBENT */
+        /* HERO SECTION : Image toot.bag gen z.jpg */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('toot.bag gen z.png'); 
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('toot.bag gen z.jpg'); 
             background-size: cover;
             background-position: center;
             display: flex;
@@ -58,21 +58,34 @@
         .title-group h2 { font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--dark); }
         .title-group p { color: var(--primary); text-transform: uppercase; letter-spacing: 3px; font-size: 0.9rem; margin-bottom: 10px; }
 
-        /* Product Gallery */
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-        .product-card { background: white; border-radius: 5px; overflow: hidden; transition: 0.4s; border: 1px solid #eee; text-align: center;}
-        .product-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
-        .product-card img { width: 100%; height: 400px; object-fit: cover; }
-        .product-info { padding: 20px; }
+        /* Grid des 10 Produits */
+        .product-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 25px; 
+        }
+        .product-card { 
+            background: white; 
+            border-radius: 8px; 
+            overflow: hidden; 
+            transition: 0.4s; 
+            border: 1px solid #eee; 
+            text-align: center;
+        }
+        .product-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.08); }
+        .product-card img { width: 100%; height: 320px; object-fit: cover; }
+        .product-info { padding: 15px; }
+        .product-info h3 { font-size: 1rem; margin-bottom: 5px; font-family: 'Playfair Display', serif; }
+        .price { color: var(--primary); font-weight: 700; font-size: 1.1rem; }
 
         /* Vision Section */
         .vision-grid {
             display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;
         }
-        .vision-item { background: #fff; padding: 40px 30px; text-align: center; border-bottom: 4px solid var(--gold); transition: 0.3s; }
+        .vision-item { background: #fff; padding: 40px 30px; text-align: center; border-bottom: 4px solid var(--gold); }
         .vision-item i { font-size: 2.2rem; color: var(--gold); margin-bottom: 20px; }
 
-        /* Contact Section Stylé */
+        /* Contact Section */
         .contact-container {
             max-width: 1100px; margin: 0 auto; background: white; border-radius: 15px;
             display: flex; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,0.1);
@@ -80,7 +93,7 @@
         .contact-info { background: var(--primary); color: white; padding: 60px; flex: 1; }
         .contact-form { padding: 60px; flex: 1.5; }
         .input-group { margin-bottom: 25px; }
-        .input-group input, .input-group select, .input-group textarea {
+        .input-group input, .input-group select {
             width: 100%; padding: 15px; border: 1px solid #eee; border-radius: 5px; background: #fafafa;
         }
 
@@ -94,7 +107,6 @@
         @media (max-width: 768px) {
             .contact-container { flex-direction: column; }
             .nav-links { display: none; }
-            .hero-content h1 { font-size: 2.5rem; }
         }
     </style>
 </head>
@@ -114,113 +126,20 @@
         <div class="hero-content">
             <p style="color: var(--gold); font-weight: 600; letter-spacing: 5px; text-transform: uppercase;">Smart Tech Lifestyle</p>
             <h1>Rechargez votre monde, partout et à tout moment.</h1>
-            <p><strong>SOLIVIA</strong> : Le futur de la mode durable au Maroc. Nos sacs solaires intelligents vous offrent une autonomie totale avec élégance.</p>
-            <a href="#produits" class="cta-main">Découvrir la collection</a>
+            <p><strong>SOLIVIA</strong> : Le futur de la mode durable au Maroc. Nos sacs solaires intelligents vous offrent une autonomie totale.</p>
+            <a href="#produits" class="cta-main">Explorer la boutique</a>
         </div>
     </section>
 
     <section class="section" id="produits">
         <div class="title-group">
-            <p>Excellence & Innovation</p>
-            <h2>Boutique SOLIVIA</h2>
+            <p>Innovation Marocaine</p>
+            <h2>La Collection Complète</h2>
         </div>
+        
         <div class="product-grid">
             <div class="product-card">
                 <img src="sac-beige.jpg.jpg" alt="Sac Beige">
-                <div class="product-info">
-                    <h3>The Beige Nomad</h3>
-                    <p style="color: var(--primary); font-weight: bold;">890 DH</p>
-                </div>
+                <div class="product-info"><h3>The Beige Nomad</h3><p class="price">890 DH</p></div>
             </div>
-            <div class="product-card">
-                <img src="sac-black.jpg.jpg" alt="Sac Noir">
-                <div class="product-info">
-                    <h3>Obsidian Smart</h3>
-                    <p style="color: var(--primary); font-weight: bold;">950 DH</p>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="sac-luxury.jpg.jpg" alt="Sac Luxury">
-                <div class="product-info">
-                    <h3>Emerald Prestige</h3>
-                    <p style="color: var(--primary); font-weight: bold;">1,100 DH</p>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="backpack (9).jpg" alt="Backpack">
-                <div class="product-info">
-                    <h3>Explorer Backpack</h3>
-                    <p style="color: var(--primary); font-weight: bold;">980 DH</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section" id="vision" style="background-color: #f7f3f0;">
-        <div class="title-group">
-            <p>Notre ADN</p>
-            <h2>Vision SOLIVIA</h2>
-        </div>
-        <div class="vision-grid">
-            <div class="vision-item">
-                <i class="fas fa-sun"></i>
-                <h4>Solar (Énergie)</h4>
-                <p>Intégration de panneaux solaires pour une autonomie durable.</p>
-            </div>
-            <div class="vision-item">
-                <i class="fas fa-gem"></i>
-                <h4>Lifestyle</h4>
-                <p>Un accessoire premium adapté au mode de vie urbain marocain.</p>
-            </div>
-            <div class="vision-item">
-                <i class="fas fa-battery-full"></i>
-                <h4>Intelligence</h4>
-                <p>Optimisation de l'énergie pour une recharge rapide et sécurisée.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="section" id="contact">
-        <div class="contact-container">
-            <div class="contact-info">
-                <h3 style="font-family: 'Playfair Display'; font-size: 2rem; margin-bottom: 20px;">Contactez-nous</h3>
-                <p><i class="fas fa-phone-alt"></i> +212 693 702 209</p><br>
-                <p><i class="fas fa-map-marker-alt"></i> Casablanca, Maroc</p>
-            </div>
-
-            <div class="contact-form">
-                <div class="input-group">
-                    <label>Votre Nom</label>
-                    <input type="text" id="name-input" placeholder="Ahmed Alami">
-                </div>
-                <div class="input-group">
-                    <label>Modèle qui vous intéresse</label>
-                    <select id="model-input">
-                        <option value="Beige Nomad">The Beige Nomad</option>
-                        <option value="Obsidian Smart">Obsidian Smart</option>
-                        <option value="Emerald Prestige">Emerald Prestige</option>
-                        <option value="Explorer Backpack">Explorer Backpack</option>
-                    </select>
-                </div>
-                <button class="order-btn" onclick="sendToWA()">
-                    <i class="fab fa-whatsapp"></i> COMMANDER SUR WHATSAPP
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 SOLIVIA BRAND | El Youssoufi Douae & Aghzal Fatima Zohra</p>
-    </footer>
-
-    <script>
-        function sendToWA() {
-            const name = document.getElementById('name-input').value;
-            const model = document.getElementById('model-input').value;
-            if(name == "") { alert("Veuillez entrer votre nom."); return; }
-            const message = `Salam SOLIVIA, je suis ${name}. Je voudrais commander le modèle : ${model}.`;
-            window.open(`https://wa.me/212693702209?text=${encodeURIComponent(message)}`, '_blank');
-        }
-    </script>
-</body>
-</html>
+            <div class="product-card
