@@ -29,7 +29,7 @@
         .nav-links a { text-decoration: none; color: white; font-weight: 400; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
         .nav-links a:hover { color: var(--gold); }
 
-        /* HERO SECTION : Image toot.bag gen z.jpg */
+        /* HERO SECTION */
         .hero {
             height: 100vh;
             background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('toot.bag gen z.jpg'); 
@@ -40,9 +40,7 @@
             padding: 0 8%;
             color: white;
         }
-        .hero-content { max-width: 750px; animation: fadeInUp 1s ease; }
-        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-        
+        .hero-content { max-width: 750px; }
         .hero-content h1 { font-family: 'Playfair Display', serif; font-size: 4rem; line-height: 1.1; margin-bottom: 20px; }
         .hero-content p { font-size: 1.2rem; margin-bottom: 35px; color: #eee; font-weight: 300; }
         
@@ -58,7 +56,7 @@
         .title-group h2 { font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--dark); }
         .title-group p { color: var(--primary); text-transform: uppercase; letter-spacing: 3px; font-size: 0.9rem; margin-bottom: 10px; }
 
-        /* Grid des 10 Produits */
+        /* Product Gallery */
         .product-grid { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
@@ -73,7 +71,7 @@
             text-align: center;
         }
         .product-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.08); }
-        .product-card img { width: 100%; height: 320px; object-fit: cover; }
+        .product-card img { width: 100%; height: 350px; object-fit: cover; background-color: #f0f0f0; }
         .product-info { padding: 15px; }
         .product-info h3 { font-size: 1rem; margin-bottom: 5px; font-family: 'Playfair Display', serif; }
         .price { color: var(--primary); font-weight: 700; font-size: 1.1rem; }
@@ -142,4 +140,94 @@
                 <img src="sac-beige.jpg.jpg" alt="Sac Beige">
                 <div class="product-info"><h3>The Beige Nomad</h3><p class="price">890 DH</p></div>
             </div>
-            <div class="product-card
+            <div class="product-card">
+                <img src="sac-black.jpg.jpg" alt="Sac Noir">
+                <div class="product-info"><h3>Obsidian Smart</h3><p class="price">950 DH</p></div>
+            </div>
+            <div class="product-card">
+                <img src="sac-luxury.jpg.jpg" alt="Sac Luxury">
+                <div class="product-info"><h3>Emerald Prestige</h3><p class="price">1,100 DH</p></div>
+            </div>
+            <div class="product-card">
+                <img src="backpack (9).jpg" alt="Backpack">
+                <div class="product-info"><h3>Explorer Backpack</h3><p class="price">980 DH</p></div>
+            </div>
+            <div class="product-card">
+                <img src="sac-brown.jpg.jpg" alt="Sac Brown">
+                <div class="product-info"><h3>Classic Sienna</h3><p class="price">850 DH</p></div>
+            </div>
+            <div class="product-card">
+                <img src="sac-pink (1).jpg" alt="Sac Pink">
+                <div class="product-info"><h3>Pink Solar Mini</h3><p class="price">750 DH</p></div>
+            </div>
+            <div class="product-card">
+                <img src="sac.a.main pink.jpg" alt="Sac à main Pink">
+                <div class="product-info"><h3>Rose Blossom Tote</h3><p class="price">790 DH</p></div>
+            </div>
+            <div class="product-card">
+                <img src="tote.bag-green (8).jpg" alt="Tote Green 8">
+                <div class="product-info"><h3>Eco Leaf Green</h3><p class="price">650 DH</p></div>
+            </div>
+            <div class="product-card">
+                <img src="tote.bag-green (6).jpg" alt="Tote Green 6">
+                <div class="product-info"><h3>Urban Forest Tote</h3><p class="price">650 DH</p></div>
+            </div>
+            <div class="product-card">
+                <img src="toot.bag gen z.jpg" alt="Tote Gen Z">
+                <div class="product-info"><h3>Gen-Z Solar Bag</h3><p class="price">690 DH</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="vision" style="background-color: #f7f3f0;">
+        <div class="title-group">
+            <p>Notre ADN</p>
+            <h2>Vision SOLIVIA</h2>
+        </div>
+        <div class="vision-grid">
+            <div class="vision-item"><i class="fas fa-sun"></i><h4>Solar</h4><p>Énergie durable intégrée.</p></div>
+            <div class="vision-item"><i class="fas fa-gem"></i><h4>Lifestyle</h4><p>Design premium & moderne.</p></div>
+            <div class="vision-item"><i class="fas fa-battery-full"></i><h4>Autonomy</h4><p>Liberté de mouvement totale.</p></div>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3 style="font-family: 'Playfair Display'; font-size: 2rem; margin-bottom: 20px;">Contact</h3>
+                <p><i class="fas fa-phone-alt"></i> +212 693 702 209</p><br>
+                <p>Livraison partout au Maroc.</p>
+            </div>
+            <div class="contact-form">
+                <div class="input-group"><input type="text" id="cust-name" placeholder="Votre Nom"></div>
+                <div class="input-group">
+                    <select id="cust-model">
+                        <option value="Beige Nomad">The Beige Nomad</option>
+                        <option value="Obsidian Smart">Obsidian Smart</option>
+                        <option value="Emerald Prestige">Emerald Prestige</option>
+                        <option value="Explorer Backpack">Explorer Backpack</option>
+                        <option value="Classic Sienna">Classic Sienna</option>
+                        <option value="Solar Mini">Pink Solar Mini</option>
+                        <option value="Rose Blossom">Rose Blossom Tote</option>
+                        <option value="Eco Green">Eco Leaf Green</option>
+                        <option value="Urban Forest">Urban Forest Tote</option>
+                        <option value="Gen-Z Bag">Gen-Z Solar Bag</option>
+                    </select>
+                </div>
+                <button class="order-btn" onclick="sendToWA()"><i class="fab fa-whatsapp"></i> COMMANDER VIA WHATSAPP</button>
+            </div>
+        </div>
+    </section>
+
+    <footer><p>&copy; 2026 SOLIVIA | Projet par Douae & Fatima Zohra</p></footer>
+
+    <script>
+        function sendToWA() {
+            const name = document.getElementById('cust-name').value;
+            const model = document.getElementById('cust-model').value;
+            if(name == "") { alert("Veuillez entrer votre nom."); return; }
+            window.open(`https://wa.me/212693702209?text=Salam SOLIVIA, je suis ${name}. Je commande le modèle : ${model}`, '_blank');
+        }
+    </script>
+</body>
+</html>
